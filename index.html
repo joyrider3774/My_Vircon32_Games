@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>joyrider3774&rsquo;s Vircon32 Games</title>
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #0b0e0b;
+    --panel: #141813;
+    --panel-border: #263323;
+    --text: #e8f2e4;
+    --muted: #9db296;
+    --accent: #7cfc00;
+    --accent-dim: #4c8f14;
+    --link: #7fd4ff;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  a { color: var(--link); }
+
+  header {
+    padding: 3em 1.5em 1.5em;
+    text-align: center;
+    background:
+      radial-gradient(ellipse at top, rgba(124, 252, 0, 0.08), transparent 60%),
+      var(--bg);
+    border-bottom: 1px solid var(--panel-border);
+  }
+
+  header h1 {
+    margin: 0 0 0.2em;
+    font-size: 2em;
+    letter-spacing: 0.02em;
+  }
+
+  header h1 span.v { color: var(--accent); }
+
+  header p {
+    margin: 0.3em 0;
+    color: var(--muted);
+  }
+
+  header .links {
+    margin-top: 1em;
+    font-size: 0.95em;
+  }
+
+  header .links a {
+    margin: 0 0.6em;
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2em 1.5em 4em;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.4em;
+  }
+
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.15s ease, border-color 0.15s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-dim);
+  }
+
+  .card .cover {
+    width: 100%;
+    aspect-ratio: 315 / 250;
+    object-fit: cover;
+    display: block;
+    background: #000;
+  }
+
+  .card .body {
+    padding: 0.9em 1em 1.1em;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .card h2 {
+    margin: 0 0 0.4em;
+    font-size: 1.05em;
+  }
+
+  .card h2 a {
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .card h2 a:hover {
+    color: var(--accent);
+  }
+
+  .card .desc {
+    color: var(--muted);
+    font-size: 0.9em;
+    flex: 1;
+    margin: 0 0 1em;
+  }
+
+  .card .actions {
+    display: flex;
+    gap: 0.6em;
+    align-items: center;
+  }
+
+  .play-button {
+    display: inline-block;
+    background: var(--accent);
+    color: #0b0e0b;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.45em 0.9em;
+    border-radius: 5px;
+    font-size: 0.9em;
+  }
+
+  .play-button:hover {
+    background: #96ff33;
+  }
+
+  .itch-link {
+    font-size: 0.85em;
+    color: var(--muted);
+    text-decoration: none;
+  }
+
+  .itch-link:hover {
+    color: var(--link);
+  }
+
+  footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5em 3em;
+    color: var(--muted);
+    font-size: 0.85em;
+  }
+
+  footer .controls-table {
+    display: inline-grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 0.2em 1.2em;
+    margin: 0.6em 0 0;
+    font-family: monospace;
+  }
+
+  footer .controls-table span.key {
+    color: var(--accent);
+  }
+
+  footer hr {
+    border: none;
+    border-top: 1px solid var(--panel-border);
+    margin: 2em 0 1.2em;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1><span class="v">V</span>ircon32 Games &mdash; joyrider3774</h1>
+  <p>A collection of homebrew games for the Vircon32 fantasy console, playable right in your browser.</p>
+  <div class="links">
+    <a href="https://itch.io/c/4578020/joyrider3774s-vircon32-games" target="_blank" rel="noopener">Full collection on itch.io</a>
+    &middot;
+    <a href="https://www.vircon32.com" target="_blank" rel="noopener">About Vircon32</a>
+  </div>
+</header>
+
+<main>
+  <div class="grid">
+
+    <div class="card">
+      <img class="cover" src="covers/crisp-game-lib.png" alt="Crisp Game Library Portable Vircon32 Version cover" loading="lazy">
+      <div class="body">
+        <h2><a href="Vircon32Web.html?rom=games/crisp-game-lib.v32">Crisp Game Library Portable</a></h2>
+        <p class="desc">A port of crisp game lib portable by abagames to the Vircon32 fantasy console.</p>
+        <div class="actions">
+          <a class="play-button" href="Vircon32Web.html?rom=games/crisp-game-lib.v32">&#9654; Play</a>
+          <a class="itch-link" href="https://joyrider3774.itch.io/crisp-game-library-portable-vircon-32" target="_blank" rel="noopener">itch.io page</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="cover" src="covers/fifteen.png" alt="Fifteen Vircon32 Version cover" loading="lazy">
+      <div class="body">
+        <h2><a href="Vircon32Web.html?rom=games/Fifteen.v32">Fifteen</a></h2>
+        <p class="desc">The fifteen sliding puzzle game for Vircon32, based on the code from the 2048 game by Carra.</p>
+        <div class="actions">
+          <a class="play-button" href="Vircon32Web.html?rom=games/Fifteen.v32">&#9654; Play</a>
+          <a class="itch-link" href="https://joyrider3774.itch.io/fifteen-vircon32" target="_blank" rel="noopener">itch.io page</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="cover" src="covers/worm.png" alt="Worm Vircon32 version cover" loading="lazy">
+      <div class="body">
+        <h2><a href="Vircon32Web.html?rom=games/Worm.v32">Worm</a></h2>
+        <p class="desc">Copter / Worm game remake for Vircon32 with 5 game modes and a seed system.</p>
+        <div class="actions">
+          <a class="play-button" href="Vircon32Web.html?rom=games/Worm.v32">&#9654; Play</a>
+          <a class="itch-link" href="https://joyrider3774.itch.io/worm-vircon32-version" target="_blank" rel="noopener">itch.io page</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="cover" src="covers/znax.png" alt="Znax Vircon32 Version cover" loading="lazy">
+      <div class="body">
+        <h2><a href="Vircon32Web.html?rom=games/Znax.v32">Znax</a></h2>
+        <p class="desc">A remake of Znax, the connect-4 style flash game by Nick Kouvaris, for the Vircon32 fantasy console.</p>
+        <div class="actions">
+          <a class="play-button" href="Vircon32Web.html?rom=games/Znax.v32">&#9654; Play</a>
+          <a class="itch-link" href="https://joyrider3774.itch.io/znax-vircon32-version" target="_blank" rel="noopener">itch.io page</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="cover" src="covers/vircoban.png" alt="Vircoban cover" loading="lazy">
+      <div class="body">
+        <h2><a href="Vircon32Web.html?rom=games/Vircoban.v32">Vircoban</a></h2>
+        <p class="desc">A Sokoban engine for Vircon32.</p>
+        <div class="actions">
+          <a class="play-button" href="Vircon32Web.html?rom=games/Vircoban.v32">&#9654; Play</a>
+          <a class="itch-link" href="https://joyrider3774.itch.io/vircoban" target="_blank" rel="noopener">itch.io page</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="cover" src="covers/blips2.png" alt="Blips Vircon32 Version cover" loading="lazy">
+      <div class="body">
+        <h2><a href="Vircon32Web.html?rom=games/Blips2.v32">Blips</a></h2>
+        <p class="desc">A DOS Bips, Bips Gold and Bips Platinum remake for Vircon32.</p>
+        <div class="actions">
+          <a class="play-button" href="Vircon32Web.html?rom=games/Blips2.v32">&#9654; Play</a>
+          <a class="itch-link" href="https://joyrider3774.itch.io/blips-vircon32-version" target="_blank" rel="noopener">itch.io page</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="cover" src="covers/waternet.png" alt="Waternet Vircon32 Version cover" loading="lazy">
+      <div class="body">
+        <h2><a href="Vircon32Web.html?rom=games/Waternet.v32">Waternet</a></h2>
+        <p class="desc">A multiplatform water pipe puzzle game written for old consoles and handhelds, ported to Vircon32.</p>
+        <div class="actions">
+          <a class="play-button" href="Vircon32Web.html?rom=games/Waternet.v32">&#9654; Play</a>
+          <a class="itch-link" href="https://joyrider3774.itch.io/waternet-vircon32-version" target="_blank" rel="noopener">itch.io page</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="cover" src="covers/puzzleland.png" alt="Puzzle Land Vircon32 Version cover" loading="lazy">
+      <div class="body">
+        <h2><a href="Vircon32Web.html?rom=games/Puzzleland.v32">Puzzle Land</a></h2>
+        <p class="desc">A remake of the Game Boy game Daedalian Opus (also known as Puzzle Road in Japan) for Vircon32.</p>
+        <div class="actions">
+          <a class="play-button" href="Vircon32Web.html?rom=games/Puzzleland.v32">&#9654; Play</a>
+          <a class="itch-link" href="https://joyrider3774.itch.io/puzzle-land-vircon32-version" target="_blank" rel="noopener">itch.io page</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="cover" src="covers/puztrix.png" alt="Puztrix Vircon32 Version cover" loading="lazy">
+      <div class="body">
+        <h2><a href="Vircon32Web.html?rom=games/Puztrix.v32">Puztrix</a></h2>
+        <p class="desc">A remake of the Gravnic game from inside the NES game Puzznic, for Vircon32.</p>
+        <div class="actions">
+          <a class="play-button" href="Vircon32Web.html?rom=games/Puztrix.v32">&#9654; Play</a>
+          <a class="itch-link" href="https://joyrider3774.itch.io/puztrix-vircon32-version" target="_blank" rel="noopener">itch.io page</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="cover" src="covers/retrotime.png" alt="RetroTime Vircon32 Version cover" loading="lazy">
+      <div class="body">
+        <h2><a href="Vircon32Web.html?rom=games/Retrotime.v32">RetroTime</a></h2>
+        <p class="desc">A game containing 8 retro-based games, playable in 3 game modes.</p>
+        <div class="actions">
+          <a class="play-button" href="Vircon32Web.html?rom=games/Retrotime.v32">&#9654; Play</a>
+          <a class="itch-link" href="https://joyrider3774.itch.io/retrotime-vircon32-version" target="_blank" rel="noopener">itch.io page</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="cover" src="covers/blockdude.png" alt="Blockdude Vircon32 version cover" loading="lazy">
+      <div class="body">
+        <h2><a href="Vircon32Web.html?rom=games/Blockdude.v32">Blockdude</a></h2>
+        <p class="desc">A remake of the TI calculator game by Brandon Sterner, as well as the Blockman game from Soleau Software.</p>
+        <div class="actions">
+          <a class="play-button" href="Vircon32Web.html?rom=games/Blockdude.v32">&#9654; Play</a>
+          <a class="itch-link" href="https://joyrider3774.itch.io/blockdude-vircon32-version" target="_blank" rel="noopener">itch.io page</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="cover" src="covers/formula1.png" alt="Formula 1 Vircon32 Version cover" loading="lazy">
+      <div class="body">
+        <h2><a href="Vircon32Web.html?rom=games/Formula1.v32">Formula 1</a></h2>
+        <p class="desc">A small fictive Formula 1 Game &amp; Watch style game with high score keeping, for Vircon32.</p>
+        <div class="actions">
+          <a class="play-button" href="Vircon32Web.html?rom=games/Formula1.v32">&#9654; Play</a>
+          <a class="itch-link" href="https://joyrider3774.itch.io/formula-1-vircon32-version" target="_blank" rel="noopener">itch.io page</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="cover" src="covers/rubido.png" alt="Rubido Vircon32 Version cover" loading="lazy">
+      <div class="body">
+        <h2><a href="Vircon32Web.html?rom=games/Rubido.v32">Rubido</a></h2>
+        <p class="desc">A Chinese checkers / solitaire game with 4 difficulties, for Vircon32.</p>
+        <div class="actions">
+          <a class="play-button" href="Vircon32Web.html?rom=games/Rubido.v32">&#9654; Play</a>
+          <a class="itch-link" href="https://joyrider3774.itch.io/rubido-vircon32-version" target="_blank" rel="noopener">itch.io page</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="cover" src="covers/mazethingie.png" alt="Mazethingie Vircon32 Version cover" loading="lazy">
+      <div class="body">
+        <h2><a href="Vircon32Web.html?rom=games/Mazethingie.v32">Mazethingie</a></h2>
+        <p class="desc">A maze generator / player game for the Vircon32 fantasy console.</p>
+        <div class="actions">
+          <a class="play-button" href="Vircon32Web.html?rom=games/Mazethingie.v32">&#9654; Play</a>
+          <a class="itch-link" href="https://joyrider3774.itch.io/mazethingie-vircon32-version" target="_blank" rel="noopener">itch.io page</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <hr>
+  <p>All games run in the same Vircon32 web emulator, with the console's default keyboard mapping:</p>
+  <div class="controls-table">
+    <span><span class="key">Arrows</span></span><span>D-pad</span>
+    <span><span class="key">X</span></span><span>Button A</span>
+    <span><span class="key">Z</span></span><span>Button B</span>
+    <span><span class="key">S</span></span><span>Button X</span>
+    <span><span class="key">A</span></span><span>Button Y</span>
+    <span><span class="key">Q</span></span><span>Button L</span>
+    <span><span class="key">W</span></span><span>Button R</span>
+    <span><span class="key">Enter</span></span><span>Start</span>
+  </div>
+  <p>Vircon32 and its emulator were created by Carra &mdash; <a href="https://www.vircon32.com" target="_blank" rel="noopener">www.vircon32.com</a></p>
+</footer>
+
+</body>
+</html>
